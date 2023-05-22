@@ -49,10 +49,10 @@ class QuanLyHoaDon {
         return tongThanhTien / count;
     }
 
-    public void xuatHoaDonThang9Nam2013() {
-        System.out.println("Hoá đơn trong tháng 09 năm 2013:");
+    public void xuatHoaDonThang5Nam2023() {
+        System.out.println("Hoá đơn trong tháng 05 năm 2023:");
         for (HoaDon hoaDon : danhSachHoaDon) {
-            if (hoaDon.ngayRaHoaDon.contains("09/2013")) {
+            if (hoaDon.ngayRaHoaDon.contains("05/2023")) {
                 hoaDon.xuatThongTin();
             }
         }
@@ -61,11 +61,11 @@ class QuanLyHoaDon {
     public static void main(String[] args) {
         QuanLyHoaDon qlhd = new QuanLyHoaDon();
 
-        KhachHangVietNam khachHang1 = new KhachHangVietNam("KH001", "Nguyễn Văn A", "01/09/2013", "sinh hoạt",
+        KhachHangVietNam khachHang1 = new KhachHangVietNam("KH001", "Nguyễn Văn A", "01/03/2023", "sinh hoạt",
                 100, 5000, 50);
-        KhachHangVietNam khachHang2 = new KhachHangVietNam("KH002", "Trần Thị B", "02/09/2013", "kinh doanh",
+        KhachHangVietNam khachHang2 = new KhachHangVietNam("KH002", "Trần Thị B", "02/05/2023", "kinh doanh",
                 150, 6000, 80);
-        KhachHangNuocNgoai khachHang3 = new KhachHangNuocNgoai("KH003", "John Smith", "03/09/2013", "USA",
+        KhachHangNuocNgoai khachHang3 = new KhachHangNuocNgoai("KH003", "John Smith", "11/05/2023", "USA",
                 200, 7000);
 
         qlhd.themHoaDon(khachHang1);
@@ -80,6 +80,6 @@ class QuanLyHoaDon {
         double trungBinhThanhTienKhachHangNuocNgoai = qlhd.tinhTrungBinhThanhTienKhachHangNuocNgoai();
         System.out.println("Trung bình thành tiền khách hàng nước ngoài: " + trungBinhThanhTienKhachHangNuocNgoai);
 
-        qlhd.xuatHoaDonThang9Nam2013();
+        qlhd.xuatHoaDonThang5Nam2023();
     }
 }
